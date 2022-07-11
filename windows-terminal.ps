@@ -1,0 +1,80 @@
+# Laravel
+
+function pa() {
+    php artisan $args
+}
+
+function pa7() {
+    php7 artisan $args
+}
+
+function pas7 {
+    Start-Process "http://localhost:8000"
+    pa7('serve')
+}
+
+function pas {
+    Start-Process "http://localhost:8000"
+    pa('serve')
+}
+
+function pam {
+    php artisan migrate:fresh --seed
+}
+
+function ideme() {
+    php artisan ide-helper:models -M -R -q
+}
+
+function nrw {
+    npm run watch
+}
+
+function nrp {
+    npm run production
+}
+
+function opc() {
+    php artisan optimize:clear
+}
+
+# Locating
+
+function .. {
+    Set-Location ..
+}
+
+function dev() {
+    Set-Location "$home\Desktop\developments.world\$args"
+}
+
+function home() {
+    Set-Location "$home\Desktop\$args"
+}
+
+function hosts {
+    code "C:\Windows\System32\drivers\etc\hosts"
+}
+
+# Aliases
+
+Set-Alias c composer
+Set-Alias l laravel
+Set-Alias g git
+
+# SSH / Bitvise
+
+function to() {
+    ssh -o StrictHostKeyChecking=no root@$args
+}
+
+function tos() {
+    start "C:\Program Files (x86)\Bitvise SSH Client\BvSsh.exe" -host="$args", -keypairFile="C:\Users\Rene\.ssh\id_rsa", -loginOnStartup
+}
+
+# Git
+
+function gac() {
+    git add .
+    git commit $args
+}
