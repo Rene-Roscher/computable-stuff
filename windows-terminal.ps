@@ -30,6 +30,10 @@ function nrw {
     npm run watch
 }
 
+function nrd {
+    npm run dev
+}
+
 function nrp {
     npm run production
 }
@@ -74,7 +78,21 @@ function tos() {
 
 # Git
 
+function wip() {
+    git add .
+    git commit "WIP"
+}
+
 function gac() {
     git add .
     git commit $args
+}
+
+function slb() {
+    $currentDirectory = Get-Location
+
+    # Get the full path of the current directory
+    $fullPath = $currentDirectory.Path
+
+    node C:\Users\Rene\Desktop\test-projects\node-testing\load-balancer.js $fullPath\artisan $args
 }
